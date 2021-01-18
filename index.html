@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>StarBucks</title>
+</head>
+<body>
+	<section>
+		<div class="circle"></div>
+		<div class="main-circle"></div>
+		<header>
+			<a href="#"><img src="images/logo.png" class="logo"></a>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">Whats's New</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		<div class="content">
+			<div class="textBox">
+				<h2>It's not just Coffee<br>It's <span class="title">Starbucks</span></h2>
+				<p>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Consequuntur iste deserunt sint atque in ratione eos quasi suscipit nulla, eius beatae non laboriosam porro architecto, distinctio provident deleniti delectus accusamus.</p>
+				<a class="button" href="#">Learn More</a>
+			</div>
+			<div class="imgBox">
+			<img src="images/img1.png" class="starbucks">
+		</div>
+		</div>
+		<ul class="thumb">
+			<li><img src="images/thumb2.png" onclick = "imgSlider('images/img2.png'),changeCircleColor('#eb7495'),changeMainCircleColor('#eb7495'),changeTitleColor('#eb7495'),changeButtonColor('#eb7495')" ></li>
+			<li><img src="images/thumb1.png" onclick = "imgSlider('images/img1.png'),changeCircleColor('#017143'),changeMainCircleColor('#017143'),changeTitleColor('#017143'),changeButtonColor('#017143')"></li>
+			<li><img src="images/thumb3.png" onclick = "imgSlider('images/img3.png'),changeCircleColor('#BF3FBF'),changeMainCircleColor('#BF3FBF'),changeTitleColor('#BF3FBF'),changeButtonColor('#BF3FBF')" ></li>
+		</ul>
+		<ul class="sci">
+			<li><a href="#"><img src="images/facebook.png"></a></li>
+			<li><a href="#"><img src="images/twitter.png" ></a></li>
+			<li><a href="#"><img src="images/instagram.png" ></a></li>
+		</ul>
+	</section>
+
+	<script>
+		function imgSlider(anything){
+			document.querySelector('.starbucks').src = anything;
+		}
+
+		function changeCircleColor(color){
+			const circle = document.querySelector('.circle');
+			circle.style.background = color;
+			
+		}
+
+        
+        function changeMainCircleColor(main_color){
+        	const main_Color = document.querySelector('.main-circle');
+        	main_Color.style.background = main_color;
+        }
+
+        function changeTitleColor(title_color){
+        	const title_Color = document.querySelector('.title');
+        	title_Color.style.color = title_color;
+        }
+
+        function changeButtonColor(button_color){
+        	const btn_Color = document.querySelector('.button');
+        	btn_Color.style.background = button_color;
+        }
+
+	</script>
+	
+</body>
+</html>
